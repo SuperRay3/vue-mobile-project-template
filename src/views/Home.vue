@@ -3,7 +3,7 @@
     <h1>vue-mobile-project-template</h1>
     <section>
       <h3>现有功能</h3>
-      <ul>
+      <ul class="feature-list">
         <li>commitizen</li>
       </ul>
     </section>
@@ -21,3 +21,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.feature-list {
+  margin-left: 10px;
+}
+</style>
