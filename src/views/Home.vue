@@ -4,7 +4,7 @@
     <section>
       <h3>现有功能</h3>
       <ul>
-        <li></li>
+        <li>commitizen</li>
       </ul>
     </section>
   </div>
