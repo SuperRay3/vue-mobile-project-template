@@ -1,14 +1,7 @@
 <template>
-  <div class="home" style="height: 100%">
-    <h1 style="margin-top: 0">vue-mobile-project-template</h1>
-    <section>
-      <h3>现有功能</h3>
-      <ul class="feature-list">
-        <li>commitizen</li>
-        <li>vant</li>
-      </ul>
-      <van-button type="primary" @click="toAboutView">go about page</van-button>
-    </section>
+  <div style="height: 100%">
+    <h1>Third page</h1>
+    <van-button type="primary" @click="goHomePage">go home page</van-button>
   </div>
 </template>
 
@@ -20,21 +13,20 @@ import { useRouter } from '@/router/index'
 import { Button } from 'vant'
 
 export default defineComponent({
-  name: 'HomeView',
   components: {
     [Button.name]: Button
   },
   setup() {
     const { $router } = useRouter()
 
-    function toAboutView() {
+    function goHomePage() {
       unref($router).push({
-        name: 'about'
+        name: 'home'
       })
     }
 
     return {
-      toAboutView
+      goHomePage
     }
   }
 })

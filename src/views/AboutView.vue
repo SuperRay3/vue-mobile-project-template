@@ -1,7 +1,8 @@
 <template>
-  <div class="about-page">
-    <h1>about page</h1>
-    <van-button type="primary" @click="goHomePage">go home page</van-button>
+  <div class="about-page" style="height: 100%">
+    <h1 style="margin-top: 0">about page</h1>
+    <van-button type="primary" @click="goThirdPage">go third page</van-button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -20,14 +21,14 @@ export default defineComponent({
   setup() {
     const { $router } = useRouter()
 
-    function goHomePage() {
+    function goThirdPage() {
       unref($router).push({
-        name: 'home'
+        name: 'third'
       })
     }
 
     return {
-      goHomePage
+      goThirdPage
     }
   }
 })
