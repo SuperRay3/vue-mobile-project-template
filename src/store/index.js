@@ -1,18 +1,27 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 import { inject, provide } from '@vue/composition-api'
 import projectConfig from '@/config'
+
+// modules
+import config from './module/config'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    test: 1111
+  modules: {
+    config
   },
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  plugins: [
+    createPersistedState({
+      reducer(state) {
+        return {
+          config: state.config
+        }
+      }
+    })
+  ]
 })
 
 const StoreSymbol = Symbol(`${projectConfig.projectName}-store`)

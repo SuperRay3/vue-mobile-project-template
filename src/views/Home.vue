@@ -1,15 +1,5 @@
 <template>
-  <div class="home" style="height: 100%">
-    <h1 style="margin-top: 0">vue-mobile-project-template</h1>
-    <section>
-      <h3>现有功能</h3>
-      <ul class="feature-list">
-        <li>commitizen</li>
-        <li>vant</li>
-      </ul>
-      <van-button type="primary" @click="toAboutView">go about page</van-button>
-    </section>
-  </div>
+  <div>Home page</div>
 </template>
 
 <script>
