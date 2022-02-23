@@ -7,18 +7,35 @@
         <li>commitizen</li>
         <li>vant</li>
       </ul>
+      <van-button type="primary" @click="toAboutView">go about page</van-button>
     </section>
   </div>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, unref } from '@vue/composition-api'
+import { useRouter } from '@/router/index'
+
+// components
+import { Button } from 'vant'
 
 export default defineComponent({
   name: 'HomeView',
-  components: {},
+  components: {
+    [Button.name]: Button
+  },
   setup() {
-    return {}
+    const { $router } = useRouter()
+
+    function toAboutView() {
+      unref($router).push({
+        name: 'about'
+      })
+    }
+
+    return {
+      toAboutView
+    }
   }
 })
 </script>
