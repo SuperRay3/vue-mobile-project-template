@@ -2,6 +2,7 @@
   <div class="home">
     <h1>vue-mobile-project-template</h1>
     <section>
+      <van-button type="primary">主要按钮</van-button>
       <h3>现有功能</h3>
       <ul class="feature-list">
         <li>commitizen</li>
@@ -13,9 +14,15 @@
 <script>
 import { defineComponent } from '@vue/composition-api'
 
+// components
+import { Button, Form } from 'vant'
+
 export default defineComponent({
   name: 'HomeView',
-  components: {},
+  components: {
+    [Button.name]: Button,
+    [Form.name]: Form
+  },
   setup() {
     return {}
   }
