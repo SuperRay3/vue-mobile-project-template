@@ -6,6 +6,7 @@
       <h3>现有功能</h3>
       <ul class="feature-list">
         <li>commitizen</li>
+        <li>vant</li>
       </ul>
     </section>
   </div>
@@ -24,6 +25,7 @@ export default defineComponent({
     [Form.name]: Form
   },
   setup() {
+    console.warn(process.env.VUE_APP_ENV)
     return {}
   }
 })

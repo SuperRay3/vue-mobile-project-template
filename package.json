@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:stage": "vue-cli-service build --mode stage",
     "lint": "vue-cli-service lint",
     "lint:fix": "eslint --ignore-pattern 'node_modules' --ext .js,.vue src --fix"
   },
