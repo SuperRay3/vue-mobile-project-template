@@ -25,7 +25,6 @@ export default defineComponent({
     [Form.name]: Form
   },
   setup() {
-    console.warn(process.env.VUE_APP_ENV)
     return {}
   }
 })

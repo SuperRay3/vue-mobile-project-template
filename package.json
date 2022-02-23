@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:stage": "vue-cli-service build --mode stage",
+    "build": "vue-cli-service build --outputDir prod",
+    "build:stage": "vue-cli-service build --mode stage --outputDir stage",
     "lint": "vue-cli-service lint",
     "lint:fix": "eslint --ignore-pattern 'node_modules' --ext .js,.vue src --fix"
   },
