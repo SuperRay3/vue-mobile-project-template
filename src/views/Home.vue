@@ -18,9 +18,7 @@ export default defineComponent({
   name: 'HomeView',
   components: {},
   setup() {
-    return {
-      
-    }
+    return {}
   }
 })
 </script>
