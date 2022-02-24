@@ -1,5 +1,8 @@
 <template>
-  <div>Home page</div>
+  <div style="height: 100%">
+    <h1>Home page</h1>
+    <van-button type="primary" @click="goConfig">go config</van-button>
+  </div>
 </template>
 
 <script>
@@ -17,14 +20,14 @@ export default defineComponent({
   setup() {
     const { $router } = useRouter()
 
-    function toAboutView() {
+    function goConfig() {
       unref($router).push({
-        name: 'about'
+        name: 'config'
       })
     }
 
     return {
-      toAboutView
+      goConfig
     }
   }
 })

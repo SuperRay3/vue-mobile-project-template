@@ -1,7 +1,9 @@
 export default {
   namespaced: true,
   state: {
-    config: {}
+    config: {
+      vconsole: false
+    }
   },
   mutations: {
     SET_CONFIG(state, config) {
