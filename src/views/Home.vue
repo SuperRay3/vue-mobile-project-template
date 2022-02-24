@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100%">
+  <div class="h-full">
     <h1>Home page</h1>
     <van-button type="primary" @click="goConfig">go config</van-button>
   </div>

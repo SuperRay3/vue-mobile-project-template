@@ -8,6 +8,7 @@ import App from './App.vue'
 
 // styles
 import '@/style/index.scss'
+import '@/style/tailwindcss.css'
 
 Vue.config.productionTip = false
 
