@@ -24,5 +24,11 @@ module.exports = defineConfig({
         })
       )
     }
+  },
+  chainWebpack: (config) => {
+    config.plugin('html').tap((args) => {
+      args[0].title = process.env.VUE_APP_PROJECT_NAME
+      return args
+    })
   }
 })
