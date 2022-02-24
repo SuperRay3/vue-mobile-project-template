@@ -30,5 +30,16 @@ module.exports = defineConfig({
       args[0].title = process.env.VUE_APP_PROJECT_NAME
       return args
     })
+
+    config.optimization.splitChunks({
+      chunks: 'all',
+      cacheGroups: {
+        vconsole: {
+          name: 'chunk-vconsole', // split elementUI into a single package
+          priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+          test: /[\\/]node_modules[\\/]_?vconsole(.*)/ // in order to adapt to cnpm
+        }
+      }
+    })
   }
 })

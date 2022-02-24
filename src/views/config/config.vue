@@ -18,7 +18,7 @@
 
 <script>
 import { defineComponent, watch, watchEffect } from '@vue/composition-api'
-import VConsole from 'vconsole'
+// import VConsole from 'vconsole'
 
 // components
 import { Form, Field, Switch, NavBar } from 'vant'
@@ -46,8 +46,9 @@ export default defineComponent({
       $store.commit('config/SET_CONFIG', newVal)
     })
 
-    watchEffect(() => {
+    watchEffect(async () => {
       if (formModel.vconsole) {
+        const { default: VConsole } = await import('vconsole')
         vconsole = new VConsole()
       } else {
         vconsole && vconsole.destroy() && (vconsole = null)

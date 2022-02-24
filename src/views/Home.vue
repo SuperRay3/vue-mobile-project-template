@@ -1,13 +1,11 @@
 <template>
   <div class="h-full">
-    <h1>Home page</h1>
-    <van-button type="primary" @click="goConfig">go config</van-button>
+    <h1>Welcome!</h1>
   </div>
 </template>
 
 <script>
-import { defineComponent, unref } from '@vue/composition-api'
-import { useRouter } from '@/router/index'
+import { defineComponent } from '@vue/composition-api'
 
 // components
 import { Button } from 'vant'
@@ -18,17 +16,7 @@ export default defineComponent({
     [Button.name]: Button
   },
   setup() {
-    const { $router } = useRouter()
-
-    function goConfig() {
-      unref($router).push({
-        name: 'config'
-      })
-    }
-
-    return {
-      goConfig
-    }
+    return {}
   }
 })
 </script>

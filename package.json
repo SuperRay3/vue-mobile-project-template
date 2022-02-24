@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@rayuse/utils": "^0.0.3-beta.6",
     "@vue/composition-api": "^1.4.6",
     "core-js": "^3.8.3",
     "vant": "^2.12.44",
