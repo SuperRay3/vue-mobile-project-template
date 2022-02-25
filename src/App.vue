@@ -2,7 +2,14 @@
   <div id="app">
     <!-- 这里使用了 vant 自带的过渡动画效果 see detail: https://youzan.github.io/vant/v2/#/zh-CN/style -->
     <transition :name="transitionName">
-      <router-view />
+      <keep-alive>
+        <!-- 这里是会被缓存的视图组件，比如列表A页面 -->
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </keep-alive>
+    </transition>
+    <transition :name="transitionName">
+      <!-- 这里是不被缓存的视图组件，比如详情B页面-->
+      <router-view v-if="!$route.meta.keepAlive"></router-view>
     </transition>
   </div>
 </template>
