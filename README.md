@@ -18,5 +18,5 @@
 ## 功能
 
 - 开发者模式: 此模块为按需加载。当线上出问题时可通过路由 /developer-mode 进入并开启 vconsole 进行问题快速定位
-
-
+- gzip: 默认正式环境打包开启了 gzip
+- Tailwind CSS: 可通过 Tailwind CSS 编写样式
