@@ -8,13 +8,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
   },
   {
-    path: '/config',
-    name: 'config',
-    component: () => import(/* webpackChunkName: "config" */ '../views/config/config.vue')
+    path: '/developer-mode',
+    name: 'DeveloperMode',
+    component: () => import(/* webpackChunkName: "developer-mode" */ '../views/developer-mode/developer-mode.vue')
   }
 ]
 
